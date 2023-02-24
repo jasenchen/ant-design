@@ -75,20 +75,20 @@
 @black: #000;
 
 //qidian gray
-@color-gray-0: #f7f8fa; /* - */
-@color-gray-1: #f4f5f7; /* - */
-@color-gray-2: #eceef1; /* divider 分割线 */
-@color-gray-3: #e0e2e7; /* - */
-@color-gray-4: #cdd0d9; /* - */
-@color-gray-5: #b4b8c4; /* - */
-@color-gray-6: #979baa; /* 说明文字 */
-@color-gray-7: #777c8d; /* - */
-@color-gray-8: #5b5f70; /* - */
-@color-gray-9: #434756; /* - */
-@color-gray-10: #313441; /* - */
-@color-gray-11: #232530; /* - */
-@color-gray-12: #191b23; /* - */
-@color-gray-13: #121319; /* - */
+@--color-gray-0: #f7f8fa; /* - */
+@--color-gray-1: #f4f5f7; /* - */
+@--color-gray-2: #eceef1; /* divider 分割线 */
+@--color-gray-3: #e0e2e7; /* - */
+@--color-gray-4: #cdd0d9; /* - */
+@--color-gray-5: #b4b8c4; /* - */
+@--color-gray-6: #979baa; /* 说明文字 */
+@--color-gray-7: #777c8d; /* - */
+@--color-gray-8: #5b5f70; /* - */
+@--color-gray-9: #434756; /* - */
+@--color-gray-10: #313441; /* - */
+@--color-gray-11: #232530; /* - */
+@--color-gray-12: #191b23; /* - */
+@--color-gray-13: #121319; /* - */
 
 //qidan gray opacity
 @--color-opacity-0: rgba(54,79,129,0.04); /* hsla(220,41%,36%,0.04) */
@@ -193,13 +193,13 @@
   'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   'Noto Color Emoji';
 @code-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-@text-color: @color-opacity-13;
-@text-color-secondary: @color-opacity-8;
-@text-color-caption: @color-opacity-6;
+@text-color: @--color-opacity-13;
+@text-color-secondary: @--color-opacity-8;
+@text-color-caption: @--color-opacity-6;
 @text-color-inverse: @white;
 @icon-color: inherit;
-@icon-color-hover: @color-opacity-8;
-@heading-color: @color-opacity-13;
+@icon-color-hover: @--color-opacity-8;
+@heading-color: @--color-opacity-13;
 @text-color-dark: fade(@white, 85%);
 @text-color-secondary-dark: fade(@white, 65%);
 @text-selection-bg: @--color-primary-normal;
@@ -250,7 +250,7 @@
 // The background colors for active and hover states for things like
 // list items or table cells.
 @item-active-bg: @primary-1;
-@item-hover-bg: @color-opacity-1;
+@item-hover-bg: @--color-opacity-1;
 
 // ICONFONT
 @iconfont-css-prefix: anticon;
@@ -281,8 +281,8 @@
 @ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
 
 // Border color
-@border-color-base: @color-opacity-3; // base border outline a component
-@border-color-split: @color-opacity-3; // split border inside a component
+@border-color-base: @--color-opacity-3; // base border outline a component
+@border-color-split: @--color-opacity-3; // split border inside a component
 @border-color-inverse: @white;
 @border-width-base: 1px; // width of the border for a component
 @border-style-base: solid; // style of a components border
@@ -295,8 +295,8 @@
 @outlinjute-color: @--color-primary-normal; // No use anymore
 @outline-fade: 0%;
 
-@background-color-light: @color-opacity-1; // background of header and selected item
-@background-color-base: @color-gray-0; // Default grey background color
+@background-color-light: @--color-opacity-1; // background of header and selected item
+@background-color-base: @--color-gray-0; // Default grey background color
 
 // Disabled states
 @disabled-color: @--color-opacity-4;
@@ -387,7 +387,7 @@
 @checkbox-group-item-margin-right: 8px;
 
 // Descriptions
-@descriptions-bg: @color-gray-0;
+@descriptions-bg: @--color-gray-0;
 @descriptions-title-margin-bottom: 20px;
 @descriptions-default-padding: @padding-md @padding-lg;
 @descriptions-middle-padding: @padding-sm @padding-lg;
@@ -401,7 +401,7 @@
 // Divider
 @divider-text-padding: 1em;
 @divider-orientation-margin: 5%;
-@divider-color: @color-opacity-2;
+@divider-color: @--color-opacity-2;
 @divider-vertical-gutter: 8px;
 
 // Dropdown
@@ -558,8 +558,8 @@
 @input-padding-vertical-lg: (
     ceil(((@input-height-lg - @font-size-lg * @line-height-base) / 2) * 10) / 10
   ) - @border-width-base;
-@input-placeholder-color: @text-caption;
-@input-color: @text-color-caption;
+@input-placeholder-color: @text-color-caption;
+@input-color: @text-color;
 @input-icon-color: @input-color;
 @input-border-color: @border-color-base;
 @input-bg: @component-background;
@@ -695,7 +695,7 @@
 @progress-remaining-color: @background-color-base;
 @progress-info-text-color: @progress-text-color;
 @progress-radius: 100px;
-@progress-steps-item-bg: @color-opacity-1;
+@progress-steps-item-bg: @--color-opacity-1;
 @progress-text-font-size: 1em;
 @progress-text-color: @text-color; // This is for circle text color, should be renamed better
 @progress-circle-text-font-size: 1em;
@@ -747,10 +747,10 @@
 // Table
 // --
 @table-bg: @component-background;
-@table-header-bg: @color-gray-1;
+@table-header-bg: @--color-gray-1;
 @table-header-color: @text-color-caption;
 @table-header-sort-bg: @background-color-base;
-@table-body-sort-bg: @color-gray-1;
+@table-body-sort-bg: @--color-gray-1;
 @table-row-hover-bg: @background-color-light;
 @table-selected-row-color: inherit;
 @table-selected-row-bg: @primary-1;
@@ -960,7 +960,7 @@
 @pagination-item-size-sm: 24px;
 @pagination-font-family: @font-family;
 @pagination-font-weight-active: 400;
-@pagination-item-bg-active: @component-background;
+@pagination-item-bg-active: @primary-color;
 @pagination-item-link-bg: @component-background;
 @pagination-item-disabled-color-active: @disabled-color;
 @pagination-item-disabled-bg-active: @disabled-active-bg;
